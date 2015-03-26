@@ -70,12 +70,12 @@ public class HuffmanCode {
 		} else if (tree instanceof HuffmanNode) {
 			HuffmanNode node = (HuffmanNode)tree;
 
-			// traverse left
+			// traverse left, add 0
 			prefix.append('0');
 			printCodes(node.left, prefix);
 			prefix.deleteCharAt(prefix.length()-1);
 
-			// traverse right
+			// traverse right add 1
 			prefix.append('1');
 			printCodes(node.right, prefix);
 			prefix.deleteCharAt(prefix.length()-1);
@@ -86,13 +86,13 @@ public class HuffmanCode {
 		//	String test = "this is an example for huffman encoding";
 
 		// we will assume that all our characters will have
-		// code less than 256, for simplicity
+		// code less than 256, for simplicity (ASCII)
 		int[] charFreqs = new int[256];
 		// read each character and record the frequencies
 
-		int[] freq={ 173, 102,77,68,59,58,55,51,49,48,35,34,26,24,21,19,18,17,16,16,13,9,6,2,2,1,1};
-
-		String list= "Petaoinshrdlcumwfgypbvkjxqz";
+	
+   // building frequency table
+	String list= "Petaoinshrdlcumwfgypbvkjxqz";
 		String a="";
 
 		for(int i=0;i<freq.length;i++){
