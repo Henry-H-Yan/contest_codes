@@ -37,6 +37,8 @@ public class algoTest {
 	 *  
 	 * @param num
 	 * @return  all lists of size 3 that sum to 0
+	 * 
+	 * Run time: O (n ^2), (essentially double for loop)
 	 */
 
 	public static ArrayList<ArrayList<Integer>> threeSumList(int[] num) {
