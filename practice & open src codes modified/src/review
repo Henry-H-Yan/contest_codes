@@ -1,0 +1,17 @@
+
+
+  findRobot: O(N), linear scan
+  findInSorted : binary search  log(N)
+  
+  Nlog(N):mergesort
+  BSTContainsValue:    (balanced??   unbalanced???)
+  
+  runtime= rt of recursive call+ rt of rest
+  
+  T(n):  
+  recur call: same algo with different inputs,
+  
+  recursive relations
+  T(n) =T(n/2) +o(1) ** when tree is BALANCED
+  
+  
