@@ -25,6 +25,12 @@ public class groupSum6{
 	}
 
 	
+	/**
+	 * possible  to split array to two with same sums?
+	 * recursive solution
+	 * @param nums
+	 * @return
+	 */
 	public boolean splitArray(int[] nums) {
 		int end=nums.length-1;
 	 return helper1(nums,0,0,0,end);
@@ -36,19 +42,7 @@ public class groupSum6{
 		
 	}
 	
-	public boolean split53(int[] nums) {
-		  return helper53(0,nums,0,0);
-	}
-public boolean helper53(int start, int[] nums, int sum1, int sum2){
-	if (start==nums.length) return sum1==sum2;
-	int cur=nums[start];
-	if(cur%5==0) return helper53(start+1,nums,sum1+cur,sum2);
-	if(cur%3==0) return helper53(start+1,nums,sum1,sum2+cur);
-			
-	else return helper53(start+1,nums,sum1,sum2+cur) ||
-			    helper53(start+1,nums,sum1+cur,sum2);
-	
-}
+
 	
 	
 	public boolean splitArray2(int[] nums) {
