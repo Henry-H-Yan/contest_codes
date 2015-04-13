@@ -17,8 +17,9 @@ public class add_ {
 		return (sb.toString()+s);
 	}
 	public static void main(String[] args){
+		// written for a cacheism assignment for computer architechture class, translate to machine bits
 	int [] list={2,6, 9, 3, 20, 98, 19, 56, 8, 11,6, 43, 5,3, 9, 98};
-	
+	int [] list2={3,180,43,2,191,88,190,14,181,44,4,100,180,186,100,4,253};
 //		for(int i:list)System.out.println ( 
 //				to32 (  Integer.toString(i,2) )
 //				);
@@ -31,6 +32,12 @@ public class add_ {
 //				to32 (  Integer.toString(i,2) ) .substring(21,31)
 //				);
 		for(int i:list)System.out.println ( 
+				to32 (  Integer.toString(i,2) ) .substring(0,20)+"||" + 
+						to32 (  Integer.toString(i,2) ) .substring(20,30)+ "|| "
+				+to32 (  Integer.toString(i,2) ) .substring(30,32)
+				);
+		System.out.println("second part of instructions");
+		for(int i:list2)System.out.println ( 
 				to32 (  Integer.toString(i,2) ) .substring(0,20)+"||" + 
 						to32 (  Integer.toString(i,2) ) .substring(20,30)+ "|| "
 				+to32 (  Integer.toString(i,2) ) .substring(30,32)
