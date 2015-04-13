@@ -8,12 +8,41 @@ public class add_ {
 	    else
 	        return add( x ^ y, (x & y) << 1);
 	}
+	 
+	public static String to32(String s){
+		StringBuilder sb=new StringBuilder();
+		for(int i=0;i<32-s.length();i++){
+			sb.append("0");
+		}
+		return (sb.toString()+s);
+	}
+	public static void main(String[] args){
+	int [] list={2,6, 9, 3, 20, 98, 19, 56, 8, 11,6, 43, 5,3, 9, 98};
 	
-	static void main(String[] args){
+//		for(int i:list)System.out.println ( 
+//				to32 (  Integer.toString(i,2) )
+//				);
+//		
+//		for(int i:list)System.out.println ( 
+//				to32 (  Integer.toString(i,2) ) .substring(0,20)
+//				);
+//		
+//		for(int i:list)System.out.println ( 
+//				to32 (  Integer.toString(i,2) ) .substring(21,31)
+//				);
+		for(int i:list)System.out.println ( 
+				to32 (  Integer.toString(i,2) ) .substring(0,20)+"||" + 
+						to32 (  Integer.toString(i,2) ) .substring(20,30)+ "|| "
+				+to32 (  Integer.toString(i,2) ) .substring(30,32)
+				);
+		
+		
+		
 		add_ a = new add_();
-		
-		System.out.println("asdfadf");
-		
+		int size =32;
+		String binaryString = String.format("%"+Integer.toString(size)+"s",Integer.toBinaryString(19)).replace(" ","0");
+		String test="0000011000";
+		System.out.println ( test.length());
 	}
 
 }
