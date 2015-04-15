@@ -1,0 +1,32 @@
+
+
+  root: starting point of tree,   parent,  left child;  
+  leaf: no children node
+  internal node
+  
+ depth root: depth is 0,   height: max depth
+ 
+ 
+   if(current==null)  //base case
+   
+   
+   Running time
+   
+   coutNodes  O(N)
+   containsNode        N
+   findMax               N
+      insert node:  LOG (N)
+   
+   Height balanced   :   height is LOG(N)
+  if unbalanced tree:  insert node runtime is worse-case O(N)   like a linkedList
+  
+   tree: not always have  log(N)
+   log(N)
+
+   
+   Binary SEARCH tree,   less than: left,  greater than: right;
+   
+   real-life:  auto balancing trees
+   
+   
+   
