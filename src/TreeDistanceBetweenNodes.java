@@ -63,12 +63,10 @@ public class TreeDistanceBetweenNodes
 
 	private static boolean findPath(Node root, int value, List<Node> path)
 	{
-		if (root == null)
-			return false;
-		path.add(root);
+		if (root == null)  return false;
+		path.add(root); // first add
 		if (root.value == value)
-		{
-			return true;
+		{		return true;
 		}
 		if (findPath(root.left, value, path)
 				|| findPath(root.right, value, path))
@@ -76,7 +74,7 @@ public class TreeDistanceBetweenNodes
 		else{
 			path.remove(root);
 			return false;
-
+                  // backtracking, if not found then pop out
 		}
 	}
 
